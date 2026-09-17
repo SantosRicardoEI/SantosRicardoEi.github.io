@@ -1,0 +1,180 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap');
+
+:root {
+    --night: #101722;
+    --paper: #f5f4ef;
+    --ink: #26313b;
+    --muted: #66717c;
+    --line: #d9dce0;
+    --tokyo-blue: #1e6f91;
+    --neon: #e94d7d;
+    --card: rgba(255, 255, 255, 0.78);
+}
+
+* { box-sizing: border-box; }
+
+body {
+    margin: 0;
+    color: var(--ink);
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
+    font-weight: 300;
+}
+
+header {
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 64px 28px 22px;
+}
+
+h1, h2, h3 {
+    font-family: "Shippori Mincho", Georgia, serif;
+    font-weight: 400;
+}
+
+h1 {
+    margin: 0;
+    color: var(--night);
+    font-size: clamp(3rem, 9vw, 5.4rem);
+    line-height: 0.9;
+    letter-spacing: -0.06em;
+}
+
+h1::after {
+    content: " 東京";
+    margin-left: 14px;
+    color: var(--neon);
+    font-family: "Noto Sans JP", sans-serif;
+    font-size: 0.25em;
+    font-weight: 400;
+    letter-spacing: 0.08em;
+    vertical-align: middle;
+}
+
+nav {
+    display: flex;
+    gap: 8px 22px;
+    flex-wrap: wrap;
+    max-width: 920px;
+    margin: 0 auto;
+    padding: 0 28px 24px;
+    border-bottom: 1px solid var(--line);
+}
+
+a {
+    color: var(--tokyo-blue);
+    font-weight: 400;
+    text-decoration-color: rgba(30, 111, 145, 0.35);
+    text-underline-offset: 4px;
+}
+
+a:hover { color: var(--neon); text-decoration-color: currentColor; }
+
+nav a {
+    color: var(--ink);
+    font-size: 0.82rem;
+    letter-spacing: 0.07em;
+    text-decoration: none;
+    text-transform: uppercase;
+}
+
+nav a:hover { color: var(--neon); }
+
+main {
+    max-width: 840px;
+    margin: 42px auto 0;
+    padding: 0 28px;
+}
+
+h2 {
+    margin: 0 0 24px;
+    color: var(--night);
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1;
+}
+
+h3 { margin: 0 0 12px; font-size: 1.45rem; }
+
+p {
+    max-width: 68ch;
+    margin: 0 0 20px;
+    color: var(--muted);
+    font-size: 1rem;
+    line-height: 1.8;
+}
+
+strong { color: var(--ink); font-weight: 500; }
+
+
+img {
+    display: block;
+    width: 100%;
+    max-height: 430px;
+    object-fit: cover;
+    border: 1px solid var(--line);
+}
+
+section {
+    max-width: 660px;
+    margin: 34px 0;
+    padding: 24px 26px;
+    background: var(--card);
+    border-left: 3px solid var(--neon);
+}
+
+ul { margin: 20px 0 0; padding: 0; list-style: none; }
+
+li {
+    padding: 10px 0;
+    border-top: 1px solid var(--line);
+    color: var(--ink);
+    font-size: 0.95rem;
+}
+
+footer {
+    max-width: 920px;
+    margin: 64px auto 0;
+    padding: 20px 28px 34px;
+    border-top: 1px solid var(--line);
+    text-align: center;
+}
+
+footer p {
+    max-width: none;
+    margin: 0;
+    font-size: 0.78rem;
+}
+
+@media (max-width: 560px) {
+    header { padding-top: 42px; }
+    main { margin-top: 30px; }
+    section { padding: 20px; }
+}
+
+.mapa {
+  display: block;
+  width: 100%;
+  max-width: 800px;
+  height: 400px;
+  margin: 0 auto;
+}
+
+.gallery {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+.gallery img {
+    width: 280px;
+    height: 200px;
+    object-fit: cover;
+}
+
+.poetry p:nth-of-type(odd) {
+    color: var(--neon);
+}
+
+.poetry p:nth-of-type(even) {
+    color: var(--tokyo-blue);
+}
