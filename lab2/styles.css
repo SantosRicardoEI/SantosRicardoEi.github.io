@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Noto+Sans+JP:wght@300;400;500&family=Shippori+Mincho:wght@400;500&display=swap');
 
+/* Variáveis globais */
 :root {
     --night: #101722;
     --paper: #f5f4ef;
@@ -11,20 +12,24 @@
     --card: rgba(255, 255, 255, 0.78);
 }
 
+/* width e height incluem padding e border no tamanho total do elemento. */
 * { box-sizing: border-box; }
 
+
 body {
-    margin: 0;
-    color: var(--ink);
-    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif;
-    font-weight: 300;
+    margin: 0; /* Remover a margem padrão do navegador. */
+    color: var(--ink); /* Cor padrão do texto. */
+    font-family: "Noto Sans JP", "Hiragino Sans", sans-serif; /* Tipo de letra. */
+    font-weight: 300; /* Espessura do texto. */
 }
 
+
 header {
-    max-width: 920px;
-    margin: 0 auto;
-    padding: 64px 28px 22px;
+    max-width: 920px; /* Largura máxima do cabeçalho. */
+    margin: 0 auto; /* 0 em cima/baixo e automático nos lados: centra. */
+    padding: 64px 28px 22px; /* Espaço interior: cima, lados e baixo. */
 }
+
 
 h1, h2, h3 {
     font-family: "Shippori Mincho", Georgia, serif;
@@ -32,13 +37,14 @@ h1, h2, h3 {
 }
 
 h1 {
-    margin: 0;
+    margin: 0; 
     color: var(--night);
-    font-size: clamp(3rem, 9vw, 5.4rem);
-    line-height: 0.9;
-    letter-spacing: -0.06em;
+    font-size: clamp(3rem, 9vw, 5.4rem); 
+    line-height: 0.9; 
+    letter-spacing: -0.06em; 
 }
 
+/* Tokyyo em janpoones */
 h1::after {
     content: " 東京";
     margin-left: 14px;
@@ -51,13 +57,13 @@ h1::after {
 }
 
 nav {
-    display: flex;
-    gap: 8px 22px;
-    flex-wrap: wrap;
-    max-width: 920px;
+    display: flex; 
+    gap: 8px 22px; /* Espaço entre linhas e colunas. */
+    flex-wrap: wrap; 
+    max-width: 920px; 
     margin: 0 auto;
-    padding: 0 28px 24px;
-    border-bottom: 1px solid var(--line);
+    padding: 0 28px 24px; 
+    border-bottom: 1px solid var(--line); 
 }
 
 a {
@@ -77,7 +83,7 @@ nav a {
     text-transform: uppercase;
 }
 
-nav a:hover { color: var(--neon); }
+nav a:hover { color: var(--neon); } 
 
 main {
     max-width: 840px;
@@ -92,6 +98,7 @@ h2 {
     line-height: 1;
 }
 
+
 h3 { margin: 0 0 12px; font-size: 1.45rem; }
 
 p {
@@ -103,7 +110,6 @@ p {
 }
 
 strong { color: var(--ink); font-weight: 500; }
-
 
 img {
     display: block;
@@ -130,6 +136,7 @@ li {
     font-size: 0.95rem;
 }
 
+
 footer {
     max-width: 920px;
     margin: 64px auto 0;
@@ -144,11 +151,7 @@ footer p {
     font-size: 0.78rem;
 }
 
-@media (max-width: 560px) {
-    header { padding-top: 42px; }
-    main { margin-top: 30px; }
-    section { padding: 20px; }
-}
+
 
 .mapa {
   display: block;
@@ -159,21 +162,22 @@ footer p {
 }
 
 .gallery {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  gap: 20px;
+    display: flex; 
+    flex-direction: row; 
+    flex-wrap: wrap; 
+    gap: 20px; 
 }
 
 .gallery img {
-    width: 280px;
-    height: 200px;
-    object-fit: cover;
+        width: 280px;
+        height: 200px;
+        object-fit: cover; /* Preenche a caixa sem deformar a imagem. */
 }
 
 .poetry p:nth-of-type(odd) {
     color: var(--neon);
 }
+
 
 .poetry p:nth-of-type(even) {
     color: var(--tokyo-blue);
