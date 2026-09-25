@@ -9,37 +9,69 @@
 <body>
 
     <header>
-        <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
-        <h1>Desenvolvimento de Interfaces Web</h1>
+
+        <section class="logo">
+            <img src="images/terminal.svg" alt="" width="40" height="40">
+            <a href="#inicio" class="logo">Ricardo Santos</a>
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="#inicio">Início</a></li>
+                <li><a href="#projetos">Projetos</a></li>
+                <li><a href="#cadeira">Cadeira</a></li>
+            </ul>
+        </nav>
     </header>
 
     <main>
-        <p>Na unidade curricular de
-            <a target="_blank" href="https://moodle.ensinolusofona.pt/course/view.php?id=27320">Desenvolvimento de Interfaces Web</a> 
-            vamos estudar: 
-        </p>
 
-        <ul>
-            <li>HTML</li>
-            <li>CSS</li>
-            <li>JavaScript</li>
-            <li>React & Next.js</li>
-        </ul>
+        <section id="inicio">
+            <div class="hero-texto"> 
+                <p class="hero-etiqueta">
+                    Portfólio · Desenvolvimento Web
+                </p> 
+                <h1>Olá, sou o <span>Ricardo.</span></h1>
+                <p class="hero-descricao">
+                    Explora os projetos que desenvolvo na cadeira de
+                    Desenvolvimento de Interfaces Web.
+                </p>
+                <a href="#projetos" class="botao-projetos">
+                    Ver projetos →
+                </a>
+            </div>
+            
+            <img src="images/photo.png" alt="Ricardo Santos">
 
-        <p>Ao longo do semestre, vamos criar soluções web criativas e funcionais.</p>
+        </section>
 
+        <section id="projetos">
         <h2>Labs</h2>
-        <ul>
-            <li>
-                <a href="lab1/index.html">Lab 1 — Tokyo</a>
-                <p>Primeira versão do site sobre a cidade.</p>
-            </li>
-            <li>
-                <a href="lab2/index.html">Lab 2 — Tokyo</a>
-                <p>Versão desenvolvida com multimédia e informação detalhada.</p>
-            </li>
-        </ul>
+            <ul>
+                <li>
+                    <a href="lab1/index.html">Lab 1 - Tokyo</a>
+                    <p>Semana 1</p>
+                </li>
+                <li>
+                    <a href="lab2/index.html">Lab 2 - Tokyo</a>
+                    <p>Semana 2</p>
+                </li>
+                <li>
+                    <a href="lab3/index.html">Lab 3 - Tokyo</a>
+                    <p>Semana 3</p>
+                </li>
+            </ul>
+        </section>
 
+        <section id="cadeira">
+            <img src="images/diw.svg" alt="Desenvolvimento de Interfaces Web">
+            <h2>Desenvolvimento de Interfaces Web</h2>
+            <p>
+                Esta página reúne os laboratórios realizados na unidade curricular
+                de Desenvolvimento de Interfaces Web e apresenta a evolução dos
+                projetos ao longo das aulas.
+            </p>
+        </section>
     </main>
 
     <footer>
