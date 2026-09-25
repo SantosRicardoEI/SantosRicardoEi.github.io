@@ -127,6 +127,52 @@ section {
     border-left: 3px solid var(--neon);
 }
 
+#destaque {
+    position: relative;
+    width: 100%;
+    max-width: none;
+    margin: 34px 0 54px;
+    padding: 0;
+    overflow: hidden;
+    background: var(--night);
+    border-left: 0;
+}
+
+#destaque::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    z-index: 1;
+    pointer-events: none;
+    background: linear-gradient(
+        to top,
+        rgba(16, 23, 34, 0.85),
+        rgba(16, 23, 34, 0.05) 70%
+    );
+}
+
+#destaque img {
+    position: relative;
+    z-index: 0;
+    width: 100%;
+    height: clamp(280px, 55vw, 520px);
+    max-height: none;
+    border: 0;
+}
+
+#destaque p {
+    position: absolute;
+    inset: auto clamp(20px, 6vw, 64px) clamp(20px, 5vw, 48px);
+    z-index: 2;
+    max-width: 12ch;
+    margin: 0;
+    color: var(--paper);
+    font-family: "Shippori Mincho", Georgia, serif;
+    font-size: clamp(2rem, 6vw, 5rem);
+    line-height: 0.95;
+    text-shadow: 0 2px 18px rgba(16, 23, 34, 0.35);
+}
+
 ul { margin: 20px 0 0; padding: 0; list-style: none; }
 
 li {
@@ -154,24 +200,144 @@ footer p {
 
 
 .mapa {
-  display: block;
-  width: 100%;
-  max-width: 800px;
-  height: 400px;
-  margin: 0 auto;
+    display: block;
+    flex: 1 1 52%;
+    width: 100%;
+    max-width: none;
+    height: 400px;
+    margin: 0;
+}
+
+.local-layout {
+    display: flex;
+    align-items: flex-start;
+    gap: 28px;
+}
+
+.local-copy {
+    flex: 1 1 48%;
 }
 
 .gallery {
-    display: flex; 
-    flex-direction: row; 
-    flex-wrap: wrap; 
-    gap: 20px; 
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.gallery > div {
+    flex: 1 1 180px;
+    overflow: hidden;
 }
 
 .gallery img {
-        width: 280px;
-        height: 200px;
-        object-fit: cover; /* Preenche a caixa sem deformar a imagem. */
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    transition: transform 0.35s ease;
+}
+
+.gallery img:hover {
+    transform: scale(1.05);
+}
+
+#gallery,
+#Videos,
+#Poetry {
+    min-height: 420px;
+}
+
+#gallery {
+    background: rgba(245, 244, 239, 0.9);
+    border-left-color: var(--tokyo-blue);
+}
+
+#Videos {
+    background: rgba(30, 111, 145, 0.1);
+}
+
+#Poetry {
+    background: rgba(233, 77, 125, 0.08);
+}
+
+#Videos iframe {
+    display: block;
+    width: 100%;
+    height: auto;
+    aspect-ratio: 16 / 9;
+    border: 0;
+}
+
+.info-intro {
+    max-width: 68ch;
+}
+
+.info-grid {
+    display: grid;
+    grid-template-columns: repeat(12, minmax(0, 1fr));
+    grid-template-areas:
+        "facts facts facts facts facts . main main main main main main"
+        "story story story story story story . secondary secondary secondary secondary secondary"
+        "link link link link link link link link link link link link";
+    gap: 20px;
+    align-items: start;
+}
+
+.info-grid > section {
+    max-width: none;
+    margin: 0;
+    padding: 24px;
+}
+
+.info-facts {
+    grid-area: facts;
+}
+
+.info-story {
+    grid-area: story;
+}
+
+.info-image {
+    position: relative;
+    display: flex;
+    min-height: 280px;
+    margin: 0;
+    overflow: hidden;
+    background: var(--night);
+}
+
+.info-image-main {
+    grid-area: main;
+}
+
+.info-image-secondary {
+    grid-area: secondary;
+}
+
+.info-image img {
+    width: 100%;
+    max-height: none;
+    border: 0;
+    object-fit: cover;
+}
+
+.info-image figcaption {
+    position: absolute;
+    right: 20px;
+    bottom: 16px;
+    left: 20px;
+    color: var(--paper);
+    font-size: 0.85rem;
+    line-height: 1.4;
+    text-shadow: 0 1px 8px rgba(16, 23, 34, 0.6);
+}
+
+.info-link {
+    grid-area: link;
+    max-width: none;
+    margin: 0;
+    padding: 20px 24px;
+    background: var(--night);
+    color: var(--paper);
 }
 
 .poetry p:nth-of-type(odd) {
@@ -181,4 +347,76 @@ footer p {
 
 .poetry p:nth-of-type(even) {
     color: var(--tokyo-blue);
+}
+
+@media (max-width: 560px) {
+    nav {
+        flex-direction: column;
+        align-items: stretch;
+        gap: 10px;
+        padding: 0 20px 18px;
+    }
+
+    nav a {
+        display: block;
+        padding: 10px 12px;
+        border: 1px solid var(--line);
+        text-align: center;
+    }
+
+    .local-layout {
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .mapa {
+        height: 320px;
+    }
+
+    #destaque {
+        margin: 28px 0 36px;
+    }
+
+    #destaque p {
+        inset: auto 20px 24px;
+        font-size: clamp(2rem, 10vw, 3.5rem);
+    }
+
+    #gallery,
+    #Videos,
+    #Poetry {
+        min-height: 0;
+        padding: 22px 20px;
+    }
+
+    .gallery {
+        gap: 14px;
+    }
+
+    .gallery > div {
+        flex-basis: 100%;
+    }
+
+    .info-grid {
+        grid-template-columns: 1fr;
+        grid-template-areas:
+            "facts"
+            "main"
+            "story"
+            "secondary"
+            "link";
+        gap: 16px;
+    }
+
+    .info-grid > section {
+        padding: 20px;
+    }
+
+    .info-image {
+        min-height: 240px;
+    }
+
+    .info-link {
+        padding: 18px 20px;
+    }
 }
