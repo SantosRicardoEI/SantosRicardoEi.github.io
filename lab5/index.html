@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JS5</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    
+    <ol>
+        <li id="hoverChange">Passa por aqui!</li>
+        <li>
+            <span id="textPaint">Pinta-me!</span>
+            <button class="painterButton" data-color="red">Red</button>
+            <button class="painterButton" data-color="green">Green</button>
+            <button class="painterButton" data-color="blue">Blue</button>
+            
+        </li>
+        <li>
+            <span>Experimenta escrever...</span>
+            <input id="reactiveInput" type="text">
+        </li>
+        <li>
+            <span>Escolha uma cor: </span>
+            <select id="colorSelector" type="text">
+                <option value="white">White</option>
+                <option value="green">Green</option>
+                <option value="blue">Blue</option>
+            </select>
+        </li>
+        <li>
+            <span>Escolha uma direção: </span>
+            <select id="flexSelector">
+                <option value="row">Row</option>
+                <option value="row-reverse">Row Reverse</option>
+                <option value="column">Column</option>
+                <option value="column-reverse">Column Reverse</option>
+            </select>
+            <div id="flexContainer">
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+                <div class="bola"></div>
+            </div>
+        </li> 
+        <li>
+            <form id="nameForm">
+                <input id="name" type="text" placeholder="Insira o seu nome">
+                <input id="age" type="number" placeholder="Insira a sua idade">
+                <input type="submit">
+            </form>
+            <p id="submitMessage"></p>
+        </li>   
+        </li>
+        <li>
+            <p>Contador</p>
+            <button id="countButton">Conta!</button>
+            <span id="counter1">0</span>
+        </li> 
+        <li>
+            <p>Contador com local storage</p>
+            <button id="incrementButton">Increment</button>
+            <button id="decrementButton">Decrement</button>
+            <button id="resetButton">Reset</button>
+            <span id="counter2">0</span>
+        </li>   
+        <li>
+            <span>Tempo passado na página: </span>
+            <span id="timer">0</span>
+            <span> segundos</span>
+
+        </li>            
+    </ol>
+
+    <script src="scripts/main.js"></script>
+
+</body>
+</html>

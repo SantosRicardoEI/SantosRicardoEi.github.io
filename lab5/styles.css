@@ -1,0 +1,30 @@
+body {
+    background-color: #dfd5f5;
+}
+
+ol {
+    padding: 20px;
+    margin: 0;
+
+}
+
+ol li {
+    padding: 20px;
+    margin: 0;
+}
+
+#flexContainer {
+    height: 200px;
+    background-color: grey;
+    display: flex;
+    flex-direction: row;
+    gap: 10px;
+}
+
+.bola {
+    width: 30px;
+    height: 30px;
+    background-color: red;
+    border-radius: 50%;
+    flex-shrink: 0;
+}
