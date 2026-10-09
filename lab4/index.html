@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Página interativa com JavaScript</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+    <header>
+
+        <section class="logo">
+            <img src="../images/terminal.svg" alt="" width="40" height="40">
+            <a href="../index.html" class="logo">Ricardo Santos</a>
+        </section>
+
+        <nav>
+            <ul>
+                <li><a href="../index.html#inicio">Início</a></li>
+                <li><a href="../index.html#projetos">Projetos</a></li>
+                <li><a href="../index.html#cadeira">Cadeira</a></li>
+                <li><a href="../tutoriais/index.html">Tutoriais</a></li>
+            </ul>
+        </nav>
+
+    </header>   
+
+    <main>
+
+        <section class="page-intro">
+            <p class="eyebrow">JavaScript interativo</p>
+            <h1>Laboratório de Eventos</h1>
+        </section>
+            
+        <section class="testes">
+            <h1>Contador de cliques</h1>
+            <button id="incrementButton">Bate-me</button>
+            <h2 id="counter">0</h2>
+        </section>
+
+        <section class="testes">
+            <h1>Botão fugitivo</h1>
+            <div class="escape-zone">
+                <button id="runawayButton">Apanha-me!</button>
+            </div>
+        </section>
+
+        <section class="testes">
+            <h1>Desenho</h1>
+            <div id="drawingArea">
+            </div>
+        </section>
+
+        <section class="testes">
+            <h1> O ficheiro misterioso</h1>
+
+            <div id="messageFile" class="file-icon">
+                <span class="file-image">📄</span>
+                <span>ficheiro_misterioso.txt</span>
+            </div>
+
+            <dialog id="messageWindow">
+                <h2>ficheiro_misterioso.txt</h2>
+                <p>Parabéns! Descobriste a mensagem secreta.</p>
+                <button id="closeWindow">Fechar</button>
+            </dialog>
+        </section>
+
+        <section class="testes">
+            <h1>Temporizador de presença</h1>
+
+            <div id="timerArea">
+                <span id="timer">0</span>
+                <span> segundos</span>
+            </div>
+        </section>
+
+    </main>
+
+
+    <footer>
+        <p>© DIW 2026</p>
+    </footer>
+
+    <script src="scripts/main.js"></script>
+    
+</body>
+</html>

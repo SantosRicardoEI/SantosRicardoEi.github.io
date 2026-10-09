@@ -254,6 +254,11 @@ footer p {
     margin: 0;
 }
 
+#testes {
+    padding: var(--section-padding) var(--page-gutter);
+    text-align: center;
+}
+
 /* Media queries para ecrãs pequenos */
 @media (max-width: 640px) {
     #projetos,
