@@ -1,0 +1,73 @@
+:root {
+    --bg-body: #0B1120;
+    --bg-main: #111C30;
+    --bg-section: #1E293B;
+    --text-primary: #F1F5F9;
+    --border-color: #334155;
+    --red-color: red;
+    --red-darkened-color: darkred;
+
+    --font-primary: Arial, sans-serif;
+}
+
+body {
+    background-color: var(--bg-body);
+    color: var(--text-primary);
+    font-family: var(--font-primary);
+}
+
+main {
+    background-color: var(--bg-main);
+    margin: 0 auto;
+    padding: 20px;
+    border-radius: 10px;
+}
+
+section {
+    background-color: var(--bg-section);
+    border: 1px solid var(--border-color);
+    border-radius: 10px;
+    margin: 20px 0;
+    padding: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    margin: 5px 0;
+    padding: 10px;
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+}
+
+input[type="submit"] {
+    background-color: var(--bg-section);
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    border-radius: 5px;
+    padding: 10px;
+}
+
+input[type="submit"]:hover {
+    background-color: var(--border-color);
+}
+
+footer {
+    text-align: center;
+    padding: 10px;
+}
+
+.botao-eliminar {
+    background-color: var(--red-color);
+    color: white;
+    border: none;
+    margin-left: 10px;
+    border-radius: 5px;
+}
+
+.botao-eliminar:hover {
+    background-color: var(--red-darkened-color);
+}

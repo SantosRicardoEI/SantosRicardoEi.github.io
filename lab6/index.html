@@ -1,40 +1,41 @@
 <!DOCTYPE html>
-<html lang="pt">
+<html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Coleção de Cromos</title>
-    <link rel="stylesheet" href="style.css">
+    <title>Cromos</title>
+    <link rel="stylesheet" href="styles/style.css">
 </head>
+
 <body>
     <header>
         <h1>Coleção de Cromos</h1>
     </header>
-
     <main>
         <section id="colecao">
             <h2>A minha coleção</h2>
-            <ul></ul>
-            <h3>Total de cromos: <span>0</span></h3>
+            <ul>
+            </ul>
+            <h3>Total de cromos: <span id="contador">0</span></h3>
         </section>
-
         <section id="repetidos">
-            <h2>Cromos repetidos</h2>
-            <ul></ul>
-            <h3>Total de repetidos: <span>0</span></h3>
+            <h2>Repetidos</h2>
+            <ul>
+            </ul>
+            <h3>Total de repetidos: <span id="contador-repetidos">0</span></h3>
         </section>
-
-        <section id="registo">
+        <section>
             <h2>Registar novo cromo</h2>
             <form>
-                <input type="number" placeholder="Número" required>
+                <input type="number" placeholder="numero" required >
                 <input type="submit" value="Registar Cromo" autofocus>
             </form>
         </section>
     </main>
+    <footer>2026, ULusófona</footer>
 
-    <footer>2026, DIW - Lab 6</footer>
-
-    <script src="scripts/script.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
+
 </html>
