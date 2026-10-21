@@ -12,12 +12,9 @@ const nodeContadorRepetidos = document.querySelector("#contador-repetidos");
 const colecao = JSON.parse(localStorage.getItem("colecao") || "[]");
 const repetidos = JSON.parse(localStorage.getItem("repetidos") || "[]");
 
-
 localStorage.clear();
 colecao = []
 repetidos = []
-
-
 
 atualizaLista();
 
