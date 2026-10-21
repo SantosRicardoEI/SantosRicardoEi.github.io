@@ -18,6 +18,7 @@ colecao = []
 repetidos = []
 
 
+
 atualizaLista();
 
 // B. Event Handlers
