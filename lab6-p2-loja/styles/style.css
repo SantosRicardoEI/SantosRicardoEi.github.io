@@ -1,0 +1,213 @@
+* {
+    box-sizing: border-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+/* ---------- Header ---------- */
+
+header {
+    background-color: rgb(10, 42, 76);
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0px 20px;
+
+    position: sticky;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+}
+
+header h1 {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+    transition: 0.3s;
+    border-bottom: 2px solid transparent;
+    padding-bottom: 5px;
+}
+
+header h1:hover {
+    color: #60a5fa;
+    border-bottom: 2px solid #60a5fa;
+}
+
+nav ul {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    gap: 30px;
+    list-style: none;
+}
+
+nav a {
+    color: white;
+    text-decoration: none;
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #60a5fa;
+}
+
+/* ---------- Layout Loja ---------- */
+
+.layout-loja {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) 320px;
+    gap: 24px;
+    padding: 32px;
+    align-items: start;
+}
+
+.coluna-cesto {
+    position: sticky;
+    top: 90px;
+    max-height: calc(100vh - 110px);
+    overflow-y: auto;
+}
+
+.section-name {
+    width: 100%;
+    text-align: center;
+}
+
+/* ---------- Produtos e Cesto ---------- */
+
+#produtos, #cesto {
+    display: flex;
+    gap: 20px;
+    padding: 0;
+}
+
+#produtos {
+    flex-direction: row;
+    flex-wrap: wrap;
+}
+
+#cesto {
+    flex-direction: column;
+    gap: 12px;
+}
+
+#produtos article, #cesto article {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 20px;
+
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+
+    transition: 0.3s;
+}
+
+#produtos article {
+    width: calc(50% - 10px);
+}
+
+#cesto article {
+    width: 100%;
+}
+
+#cesto .descricao {
+    display: none;
+}
+
+#produtos article:hover,
+#cesto article:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.12);
+}
+
+#produtos article *, #cesto article * {
+    /*
+    border: 1px solid #ccc;
+    */
+}
+
+#produtos article img, #cesto article img {
+    width: 100%;
+    height: 160px;
+    object-fit: contain;
+}
+
+#cesto article img {
+    height: 80px;
+}
+
+#produtos article button, #cesto article button {
+    background-color: #60a5fa;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+}
+
+#produtos article button:hover, #cesto article button:hover {
+    background-color: #4a90e2;
+}
+
+/* ---------- Responsividade ---------- */
+
+/* tablets */
+@media (max-width: 900px) {
+
+    #produtos article {
+        width: 100%;
+    }
+}
+
+/* ecras pequenos */
+@media (max-width: 700px) {
+
+    .layout-loja {
+        grid-template-columns: 1fr;
+        padding: 16px;
+    }
+
+    .coluna-cesto {
+        position: static;
+        max-height: none;
+        overflow: visible;
+    }
+}
+
+/* mobile */
+@media (max-width: 600px) {
+
+    #produtos, #cesto {
+        gap: 16px;
+    }
+
+    #produtos article {
+        width: 100%;
+    }
+
+    header {
+        flex-direction: column;
+        padding: 0px;
+    }
+
+    nav ul {
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 40px;
+        padding: 0;
+    }
+}
+
+/* ---------- Footer ---------- */
+
+footer {
+    background-color: rgb(10, 42, 76);
+    color: white;
+    text-align: center;
+    padding: 20px 0;
+}

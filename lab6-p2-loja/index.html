@@ -3,10 +3,40 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
 
-    <title>Document</title>
+    <title>Loja</title>
 </head>
 <body>
+    <header>
+        <h1>Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="#produtos">Produtos</a></li>
+                <li><a href="#cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="layout-loja">
+
+    <div class="coluna-produtos">
+        <h2 class="section-name">Produtos</h2>
+        <section id="produtos"></section>
+    </div>
+
+    <aside class="coluna-cesto">
+        <h2 class="section-name">Cesto</h2>
+        <section id="cesto"></section>
+    </aside>
+
+</main>
     
+    <footer>
+        <p>DIW 2026 - Ricardo Santos</p>
+    </footer>
+
+    <script src="scripts/produtos.js"></script>
+    <script src="scripts/main.js"></script>
 </body>
 </html>
