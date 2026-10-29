@@ -5,6 +5,7 @@
 body {
     margin: 0;
     padding: 0;
+    background-color: #eff6ff;
 }
 
 /* ---------- Header ---------- */
@@ -59,18 +60,10 @@ nav a:hover {
 /* ---------- Layout Loja ---------- */
 
 .layout-loja {
-    display: grid;
-    grid-template-columns: minmax(0, 1fr) 320px;
+    display: flex;
+    flex-direction: column;
     gap: 24px;
     padding: 32px;
-    align-items: start;
-}
-
-.coluna-cesto {
-    position: sticky;
-    top: 90px;
-    max-height: calc(100vh - 110px);
-    overflow-y: auto;
 }
 
 .section-name {
@@ -82,23 +75,16 @@ nav a:hover {
 
 #produtos, #cesto {
     display: flex;
-    gap: 20px;
-    padding: 0;
-}
-
-#produtos {
     flex-direction: row;
     flex-wrap: wrap;
-}
-
-#cesto {
-    flex-direction: column;
-    gap: 12px;
+    gap: 20px;
+    padding: 0;
 }
 
 #produtos article, #cesto article {
     display: flex;
     flex-direction: column;
+    width: calc(50% - 10px);
     gap: 10px;
     padding: 20px;
 
@@ -107,18 +93,6 @@ nav a:hover {
     border-radius: 10px;
 
     transition: 0.3s;
-}
-
-#produtos article {
-    width: calc(50% - 10px);
-}
-
-#cesto article {
-    width: 100%;
-}
-
-#cesto .descricao {
-    display: none;
 }
 
 #produtos article:hover,
@@ -139,10 +113,6 @@ nav a:hover {
     object-fit: contain;
 }
 
-#cesto article img {
-    height: 80px;
-}
-
 #produtos article button, #cesto article button {
     background-color: #60a5fa;
     color: white;
@@ -158,36 +128,22 @@ nav a:hover {
 
 /* tablets */
 @media (max-width: 900px) {
-
-    #produtos article {
+    #produtos article, #cesto article {
         width: 100%;
     }
 }
 
 /* ecras pequenos */
 @media (max-width: 700px) {
-
     .layout-loja {
-        grid-template-columns: 1fr;
         padding: 16px;
-    }
-
-    .coluna-cesto {
-        position: static;
-        max-height: none;
-        overflow: visible;
     }
 }
 
 /* mobile */
 @media (max-width: 600px) {
-
     #produtos, #cesto {
         gap: 16px;
-    }
-
-    #produtos article {
-        width: 100%;
     }
 
     header {

@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles/style.css">
+
+    <title>Loja</title>
+</head>
+<body>
+    <header>
+        <h1>Loja</h1>
+        <nav>
+            <ul>
+                <li><a href="#topo">Produtos</a></li>
+                <li><a href="#coluna-cesto">Cesto</a></li>
+            </ul>
+        </nav>
+    </header>
+
+<main class="layout-loja" id="topo">
+    <div id="filtros">
+        <h2 class="section-name">Selecione os seus Produtos</h2>
+
+        <div id="filtros-container">
+            <label for="filtro-categoria">Filtrar:</label>
+            <select id="filtro-categoria">
+                // JS vai adicionar as categorias aqui 
+            </select>
+            <label for="filtro-ordenacao">Ordenar:</label>
+            <select id="filtro-ordenacao">
+                <option value="preco-cre">Preço crescente</option>
+                <option value="preco-dec">Preço decrescente</option>
+            </select>
+            <label for="filtro-busca">Procurar:</label>
+            <input type="text" id="filtro-busca" placeholder="Pesquisar produtos">
+        </div>
+
+    </div>
+    <div id="coluna-produtos">
+        <section id="produtos"></section>
+    </div>
+
+    <div id="coluna-cesto">
+        <h2 class="section-name">Cesto</h2>
+        <section id="cesto"></section>
+    </div>
+</main>
+    
+    <footer>
+        <p>DIW 2026 - Ricardo Santos</p>
+    </footer>
+
+    <script src="scripts/produtos.js"></script>
+    <script src="scripts/main.js"></script>
+</body>
+</html>
