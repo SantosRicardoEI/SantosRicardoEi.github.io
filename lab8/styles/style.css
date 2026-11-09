@@ -62,7 +62,7 @@
 body {
     margin: 0;
     color: var(--cor-texto);
-    background-image: url(https://cdn.pixabay.com/photo/2016/06/02/02/33/triangles-1430105_1280.png);
+    background-image: url("../images/triangles.png");
     background-size: cover;
     background-repeat: no-repeat;
 }
