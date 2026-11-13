@@ -60,14 +60,15 @@ header {
 }
 
 #inicio {
-    display: flex;
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(0, clamp(280px, 35vw, 480px));
     align-items: center;
-    gap: var(--hero-gap);
-    padding: 60px 0 0 var(--page-gutter);
+    gap: clamp(2rem, 4vw, 4rem);
+    padding: 60px var(--page-gutter) 0;
 }
 
 .hero-texto {
-    flex: 1;
+    min-width: 0;
 }
 
 .hero-texto h1 {
@@ -120,10 +121,11 @@ header {
 }
 
 #inicio > img {
-    width: 36%;
-    height: auto;
     display: block;
-    align-self: flex-end;
+    width: 100%;
+    max-width: 480px;
+    height: auto;
+    justify-self: end;
 
     /* Gradiente de máscara para o efeito de fade-out, gerado por IA */
     -webkit-mask-image: linear-gradient(
@@ -260,7 +262,36 @@ footer p {
 }
 
 /* Media queries para ecrãs pequenos */
+@media (max-width: 800px) {
+    #inicio {
+        grid-template-columns: minmax(0, 1fr);
+        gap: 2rem;
+        padding-top: 48px;
+    }
+
+    #inicio > img {
+        width: min(100%, 360px);
+        justify-self: center;
+    }
+}
+
 @media (max-width: 640px) {
+    header {
+        flex-direction: column;
+        align-items: flex-start;
+        gap: 1.25rem;
+    }
+
+    nav {
+        width: 100%;
+    }
+
+    nav ul {
+        justify-content: space-between;
+        flex-wrap: wrap;
+        gap: 0.75rem;
+    }
+
     #projetos,
     #cadeira {
         padding: var(--section-padding-mobile) var(--page-gutter);
